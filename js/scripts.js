@@ -7,8 +7,8 @@ $(document).ready(function() {
     if (!userCountTo) {
       alert("Please enter a number to count to!")
     }
-    else if (!userCountBy || userCountBy > userCountTo) {
-      alert("Please enter a number that is smaller than what you want to count to!")
+    else if (!userCountBy || userCountBy < 0 || userCountBy > userCountTo) {
+      alert("Please enter a non-negative number that is smaller than what you want to count to!")
     }
     else {
       for (var index = 0; index <= userCountTo; index += userCountBy) {
